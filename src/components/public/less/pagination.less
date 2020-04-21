@@ -1,0 +1,44 @@
+// 分页按钮样式
+.page-cont {
+  margin: 100px 0;
+  line-height: 40px;
+  .page-describ {
+    color: #888;
+    .page-nums {
+      display: inline-block;
+      width: 40px;
+      border: 1px solid #888;
+      line-height: 20px;
+      background-color: #fff;
+      input {
+        width: 38px;
+        border: 0;
+        text-align: center;
+      }
+    }
+    .submit-sure {
+      border: 1px solid #888;
+      padding: 0 8px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+  .el-pagination {
+    display: inline-block;
+  }
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #ff0000;
+  }
+  .el-pagination.is-background .btn-next, 
+  .el-pagination.is-background .btn-prev, 
+  .el-pagination.is-background .el-pager 
+  li {
+    min-width: 40px;
+    min-height: 40px;
+    color: #888;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  
+}

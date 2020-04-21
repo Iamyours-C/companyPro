@@ -1,0 +1,925 @@
+// 商品详情页样式
+.img {
+  width: 100%;
+  height: 100%;
+}
+// 详情页主色调
+@active-color: #014c66;
+// 当前位置索引
+.position-index {
+  height: 55px;
+  line-height: 55px;
+  color: #fefefe;
+	background-color: #d90202;
+  display: none;
+}
+.detail-box {
+  .shop-cart {
+    display: none;
+  }
+  .search-box {
+   float: right;
+   margin-right: 0;
+  }
+}
+// 修改版
+// 店铺logo
+.detai-shop-logo {
+  margin-top: 35px;
+  height: 150px;
+  .detai-shop-avatar {
+    max-width: 150px;
+    height: 150px;
+    img {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+.space-line {
+  height: 1px;
+  background-color: #212122;
+}
+.detail-position {
+  height: 55px;
+  line-height: 55px;
+  background-color: @active-color;
+  .position-item {
+    padding: 0 15px;
+    font-size: 20px;
+    color: #fefefe;
+  }
+}
+// 改版部分结束
+// 商品详情
+.goods-detail {
+  margin-top: 15px;
+  .goods-detail-box {
+    // 左边显示图片盒子
+    .show-img-box {
+      width: 400px;
+      // 大图盒子
+      .detail-img-big {
+        // width: 400px;
+        height: 500px;
+        background-color: red;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      // 小图盒子
+      .little-img {
+        margin-top: 38px;
+        // display: flex;
+        display: none;
+        // justify-content: space-around;
+        flex-direction: row;
+        .little-img-lists {
+          .little-img-list {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #666;
+            cursor: pointer;
+            position: relative;
+            .a {
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    // 狂欢购物狂
+    .happy-buy-box {
+      margin-left: 20px;
+      width: 600px;
+      letter-spacing: 2px;
+      .happy-bonus-box {
+        padding-bottom: 40px;
+        // background-color: #ead3d6;
+        // 狂欢标题
+        .happy-active-title {
+          display: none;
+          height: 66px;
+          line-height: 50px;
+          position: relative;
+          .bonus-title-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+          .happy-bonus-notice {
+            position: absolute;
+            top: 0;
+            z-index: 100;
+          }
+        }
+          // 狂欢价格
+        .happy-active-price {
+          // 狂欢津贴提示
+          .bonus-notice {
+            // display: flex;
+            display: none;
+            justify-content: space-between;
+            .bonus-img-notice {
+              display: flex;
+              flex-direction: row;
+              img {
+                height: 15px;
+              }
+            }
+            .get-bonus {
+              color: #ff0000;
+              width: 48px;
+              margin-right: 40px;
+              position: relative;
+              cursor: pointer;
+              .arrow-right {
+                font-weight: 900;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+              }
+            }
+          }
+          // 活动价格
+          .bonus-bonus-price {
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            line-height: 40px;
+          }
+          .happy-price-text {
+            color: #7d7d7d;
+          }
+          .active-price, .old-price {
+            color: #ff4a03;
+          }
+        }
+        
+      }
+      // 配送地址
+      .deliver-address, .deliver-detail,
+      .buy-it-num, .num-operate,
+      .money-installment, .service-terms {
+        display: flex;
+        flex-direction: row;
+      }
+      .deliver-address {
+        height: 50px;
+        line-height: 50px;
+        .deliver-detail {
+          color: #615f5f;
+          margin-left: 40px;
+          cursor: pointer;
+        }
+      }
+      // 销量统计
+      .sale-count {
+        height: 45px;
+        line-height: 45px;
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        display: flex;
+        justify-content: space-around;
+        .sale-count-item {
+          width: 33.333%;
+          text-align: center;
+          position: relative;
+          // 月销量 累计评价
+          .month-sale-num, .count-evaluation-num {
+            color: #f61e4d;
+          }
+          // 购物积分
+          .shopping-integral-num {
+            color: #54c704;
+          }
+          // 销量统计分割线
+          .sale-count-split {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+      // 数量
+      .buy-it-num {
+        margin-top: 15px;
+        .num-operate {
+          line-height: 40px;
+          background-color: #fff;
+          // 数量输入框
+          .num-input {
+            width: 45px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #999;
+            input {
+              width: 100%;
+              height: 38px;
+              border: 0;
+              background-color: transparent;
+            }
+          }
+          // 加减数量
+          .arrow-btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .arrow-btn {
+              width: 20px;
+              height: 15px;
+              line-height: 15px;
+              text-align: center;
+              border: 1px solid #999;
+            }
+          }
+        }
+      }
+      //花呗分期
+      .money-installment {
+        margin-top: 25px;
+        .installment-detail-box {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          // 花呗分期标题
+          .notice-text {
+            color: #760101;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          // 分期类型
+          .installment-type {
+            // width: 570px;
+            display: flex;
+            justify-content: space-around;
+            .installment-type-item {
+              width: 30%;
+              text-align: center;
+              padding-top: 12px;
+              padding-bottom: 5px;
+              border: 1px solid transparent;
+              border-color: #999;
+              letter-spacing: 0;
+              cursor: pointer;
+            }
+            .active-type {
+              color: #ff4400;
+              border-color: #ff4400;
+            }
+          }
+        }
+        
+      }
+      // 购买或加购按钮
+      .detail-btns {
+        .buy-it-btn, .add-shopcart-btn {
+          display: inline-block;
+          width: 220px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: #fff;
+          letter-spacing: 2px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        .buy-it-btn {
+          background-color: #2817cd;
+        }
+        .add-shopcart-btn {
+          background-color: #d60202;
+        }
+      }
+      // 服务条款
+      .service-terms {
+        justify-content: space-between;
+        .terms-lists {
+          display: flex;
+          justify-content: space-around;
+          .terms-list {
+            margin-right: 29px;
+            cursor: default;
+          }
+        }
+      }
+    }
+    // 新之道旗舰店
+    .flagship-box {
+      width: 160px;
+      margin-left: 20px;
+      background-color: #f2f2f2;
+      .flagship-title, .service-evaluation, .store-choose {
+        font-family: Adobe 黑体 Std;
+      }
+      // 标题
+      .flagship-title {
+        background-color: @active-color;
+        color: #fff;
+      }
+      // 内容
+      .flagship-content {
+        padding: 0 5px;
+        border: 1px solid #cecece;
+        border-top: 0;
+        // 评分
+        .service-evaluation {
+          padding: 0 10px;
+          border-bottom: 1px solid #cecece;
+          .service-item {
+            display: flex;
+            justify-content: space-between;
+            .service-level {
+              color: #d90202;
+            }
+          }
+        }
+        // 进店&关注
+        .store-choose {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          border-bottom: 1px solid #cecece;
+          .into-store {
+            min-width: 70px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #cecece;
+            padding: 0 6px;
+            background-color: @active-color;
+            color: #fff;
+          }
+          .into-store:hover {
+            background-color: #fff;
+            color: #666;
+          }
+        }
+        // 信息
+        .flagship-info {
+          padding: 0 6px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // 收藏商品人气
+  .collect-popular {
+    width: 400px;
+    // display: flex;
+    display: none;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  // 店长推荐
+  .manager-recomm {
+    margin-top: 35px;
+    // 店长推荐标题
+    .manager-title {
+      border-bottom: 2px solid #d60202;
+      .manager-title-box {
+        width: 200px;
+        height: 56px;
+        line-height: 56px;
+        text-align: center;
+        background-color: #d60202;
+        color: #fff;
+        letter-spacing: 2px;
+      }
+    }
+    // 店长推荐轮播
+    .slide-lists {
+      display: flex;
+      flex-direction: row;
+      // justify-content: space-around;
+      overflow: hidden;
+      .slide-list {
+        width: 216px;
+        // 轮播图文详情
+        .slide-list-item {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 230px;
+          border: 2px solid #e40707;
+          .slide-list-img {
+            width: 100%;
+            height: 200px;
+            padding: 15px 25px;
+            background-color: #fff;
+          }
+          // 到手价的图
+          .circle-img {
+            position: absolute;
+            left: -20px;
+            bottom: -22px;
+            z-index: 1;
+          }
+          // 到手价格
+          .get-price {
+            position: absolute;
+            left: 5px;
+            bottom: 10px;
+            z-index: 100;
+            letter-spacing: 2px;
+          }
+        }
+        // 价格
+        .banner-goods-price {
+          color: #b90202;
+          letter-spacing: 4px;
+          margin: 8px 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  // 本店搜索 宝贝分类 商品详情等
+  .goods-detail-bottom {
+    margin-top: 65px;
+    // display: flex;
+    // flex-direction: row;
+    // 左
+    .detail-bottom-left {
+      width: 195px;
+      .search-title, .classify-title {
+        height: 38px;
+        line-height: 38px;
+        color: #fff;
+        letter-spacing: 2px;
+        padding-left: 10px;
+      }
+      // 本店搜索开始
+      .inner-search {
+        display: none;
+        // 标题
+        .search-title {
+          background-color: #ff2c00;
+        }
+        // 关键字搜索
+        .search-tool {
+          padding:  20px 5px;
+          background-color: #fafafa;
+          .keyword-search, .price-search {
+            display: flex;
+            flex-direction: row;
+            .search-text {
+              display: inline-block;
+              width: 45px;
+              text-align: right;
+            }
+          }
+          // 关键字搜索
+          .keyword-search {
+            .key-input {
+              width: 111px;
+              height: 22px;
+              border: 1px solid #c8c8c8;
+              background-color: #fff;
+              input {
+                width: 100%;
+                height: 18px;
+                border: 0;
+                background-color: transparent;
+                text-align: center;
+              }
+            }
+          }
+          // 搜索价格区间
+          .price-search {
+            .price-input-box {
+              display: flex;
+              flex-direction: row;
+              height: 22px;
+              line-height: 22px;
+              .start-price, .end-price {
+                width: 48px;
+                border: 1px solid #c8c8c8;
+                background-color: #fff;
+                input {
+                  width: 100%;
+                  height: 43px;
+                  height: 18px;
+                  border: 0;
+                  background-color: transparent;
+                  cursor: default;
+                }
+              }
+            }
+          }
+          // 搜索按钮
+          .search-tool-btn {
+            display: inline-block;
+            width: 55px;
+            height: 20px;
+            line-height: 20px;
+            font-weight: bolder;
+            color: #fff;
+            background: linear-gradient(#9f9f9e, #cccac9, #9f9f9e);
+            cursor: pointer;
+          }
+        }
+      }
+      // 宝贝分类
+      .goods-classify {
+        .classify-title {
+          background-color: #121ab9;
+        }
+        .look-all-goods, .classify-type-box,
+        .feed-classify, .series-classify {
+          height: 38px;
+          line-height: 38px;
+          letter-spacing: 2px;
+          color: #666;
+        }
+        .dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+        // 查看所有宝贝
+        .look-all-goods {
+          padding-left: 15px;
+          background-color: #dfe0fa;
+        }
+        .classify-type-box {
+          background-color: #fff;
+          .classify-type {
+            font-family: Adobe 黑体 Std;
+            position: relative;
+            .dot {
+              position: absolute;
+              top: 50%;
+              left: 10px;
+              margin-top: -3px;
+              background-color: #646464;
+            }
+          }
+        }
+        // 按饲料分
+        .feed-classify {
+          background-color: #dfe0fa;
+          padding-left: 25px;
+        }
+        .classify-lists {
+          padding: 20px 25px;
+          background-color: #fff;
+          .classify-list {
+            position: relative;
+            padding-left: 30px;
+            line-height: 22px;
+            .dot {
+              position: absolute;
+              top: 50%;
+              left: 10px;
+              margin-top: -3px;
+              background-color: #141cbe;
+            }
+          }
+          .classify-list:hover .series-name {
+            color: orangered;
+          }
+          .classify-list:hover .dot {
+            background-color: orangered;
+          }
+        }
+        // 按系列分
+        .series-classify {
+          background-color: #dfe0fa;
+          padding-left: 25px;
+        }
+        // 查看更多按钮
+        .look-more-box {
+          height: 100px;
+          text-align: center;
+          line-height: 100px;
+          // border: 1px solid #c8c8c8;
+          .look-more-btn {
+            display: inline-block;
+            width: 177px;
+            height: 36px;
+            line-height: 36px;
+            color: #c04e17;
+            background-color: #d6d7fa;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            font-family: Adobe 黑体 Std;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    // 右
+    .detail-bottom-right {
+      width: 100%;
+      padding-left: 230px;
+      // 商品详情 累计评价切换
+      .bottom-tab {
+        display: none;
+        height: 66px;
+        line-height: 66px;
+        color: #7d7d7d;
+        border: 1px solid #c8c8c8;
+        // display: flex;
+        flex-direction: row;
+        .tab-text {
+          width: 120px;
+          display: inline-block;
+          border-right: 1px solid #c8c8c8;
+        }
+        .active {
+          color: #ff4800;
+        }
+      }
+      // 参数详情
+      .params-detail {
+        display: none;
+        border: 1px solid #c8c8c8;
+        border-top: 0;
+        padding: 30px;
+        .param-title {
+        }
+        .params-item {
+          display: flex;
+          justify-content: space-between;
+          .label-param {
+            display: inline-block;
+            width: 115px;
+            text-align: left;
+            padding: 8px 0;
+          }
+        }
+      }
+      // 生产详情
+      .production-detail {
+        display: none;
+        height: 62px;
+        line-height: 62px;
+        background-color: #f1f0f0;
+      }
+      // 狂欢放肆购
+      .happy-shopping {
+        // position: relative;
+        // height: 400px;
+        background-color: #d30202;
+        .happy-shopping-title {
+          display: none;
+          position: relative;
+          height: 174px;
+          .happy-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+          // 标题
+          .happy-shopping-text {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            font-size: 72px;
+            line-height: 174px;
+            text-align: center;
+            letter-spacing: 2px;
+            font-family: '幼圆';
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 5px 5px 8px #580005;
+          }
+        }
+        // 开抢时间
+        .take-time {
+          display: none;
+          z-index: 999;
+          margin-top: -25px;
+          position: absolute;
+          left: 50%;
+        }
+        // 抢购商品
+        .happy-take {
+          padding: 0 45px;
+          padding-bottom: 90px;
+          margin-top: 55px;
+          padding-top: 40px;
+          // 购买按钮
+          .take-goods-btn {
+            width: 230px;
+            height: 65px;
+            line-height: 65px;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #fff;
+            font-size: 28px;
+            background-color: transparent;
+            border-radius: 20px;
+            cursor: pointer;
+          }
+          // 分割线
+          .teke-goods-split {
+            width: 12px;
+            height: 222px;
+            background-color: transparent;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0x 1px 0px #666;
+          }
+          // 抢购商品1
+          .take-goods-box {
+            display: flex;
+            flex-direction: row;
+            background-color: #fceaea;
+            padding:  40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #fceaea;
+            // 图
+            .take-goods-img {
+              width: 260px;
+              height: 260px;
+              background-color: #ffffff;
+              border-radius: 20px;
+              border: 1px solid #949494;
+              padding: 15px 40px;
+              margin-right: 90px;
+            }
+            
+            // 详情
+            .take-goods-info {
+              color: #d60202;
+              padding-top: 35px;
+              .take-goods-btn {
+                color: #fff;
+                background-color: #2b19d1;
+              }
+            }
+          }
+          // 抢购商品2
+          .take-goods-center, .center-goods-box {
+            display: flex;
+            justify-content: space-around;
+          }
+          .take-goods-center {
+            margin-top: 100px;
+            position: relative;
+            .take-goods-item {
+              width: 50%;
+              text-align: center;
+              // 商品图
+              .center-goods-img {
+                width: 220px;
+                height: 220px;
+                display: inline-block;
+                padding: 25px 35px;
+                border: 1px solid #949494;
+                border-radius: 20px;
+                background-color: #fff;
+              }
+            }
+            // 分割线
+            .teke-goods-split {
+              background-color: #ffe7e3;
+            }
+          }
+          .center-goods-box {
+            background-color: #fceaea;
+            padding:  40px 0;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #fceaea;
+            text-align: center;
+            position: relative;
+            // 价格
+            .center-goods-price {
+              width: 50%;
+              color: #ff2b01;
+              display: inline-block;
+              .get-price {
+                font-family: Adobe 黑体 Std;
+              }
+            }
+            // 按钮
+            .take-goods-btn {
+              display: inline-block;
+              background-color: #ffa200;
+            }
+            // 分割线
+            .teke-goods-split {
+              background-color: #d30202;
+              top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 商品评价
+  .goods-evolution {
+    margin-top: 60px;
+    display: none;
+    // 标题
+    .goods-evolution-title {
+      height: 60px;
+      line-height: 60px;
+      font-size: 32px;
+      background-color: #2b19d1;
+      letter-spacing: 2px;
+    }
+    .evalution-box {
+      background-color: #fff;
+      padding-bottom: 24px;
+      // 全部评论数量
+      .evalution-num {
+        padding: 24px 0 24px 30px;
+      }
+      // 好评&差评
+      .evolution-type {
+        display: flex;
+        flex-direction: row;
+        .evolution-type-btn {
+          display: inline-block;
+          width: 90px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          color: #666;
+          background-color: #e1e1e1;
+          border-radius: 14px;
+          letter-spacing: 2px;
+          cursor: pointer;
+        }
+        .on {
+          color: #d90202;
+          background-color: #ffe3e3;
+        }
+      }
+      // 评论内容
+      .evalution-content {
+        // 头像内容
+        .evalution-avatar { 
+          display: flex;
+          flex-direction: column;
+          .user-info {
+            display: flex;
+            flex-direction: row;
+            .user-avatar {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              line-height: 40px;
+              overflow: hidden;
+              vertical-align: middle;
+            }
+          }
+          .plus-center {
+            width: 60px;
+            text-align: center;
+            background-color: #414141;
+            color: gold;
+          }
+        }
+        // 评论内容
+        .evalution-detail {
+          width: 70%;
+          padding-bottom: 24px;
+          // 评论星级
+          .star-num {
+            color: #e4393c;
+          }
+          // 评论内容
+          .evalution-text {
+            line-height: 24px;
+          }
+          // 评论时间
+          .evalution-date {
+            display: flex;
+            justify-content: space-between;
+            letter-spacing: 2px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+          }
+          // 追评
+          .add-evalution {
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            line-height: 24px;
+          }
+          // 商家回复
+          .saler-evalution {
+            color: #e4393c;
+            line-height: 24px;
+            padding: 25px 0;
+          }
+        }
+      }
+    }
+    
+  }
+}

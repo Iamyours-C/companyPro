@@ -1,0 +1,218 @@
+// 开店样式
+.img {
+  width: 100%;
+  height: 100%;
+}
+.open-index {
+  height: 656px;
+  position: relative;
+  background: url(../img/openstore-bg.png) center no-repeat;
+  .open-samll-title {
+    letter-spacing: 4px;
+    opacity: 0.8;
+    position: absolute;
+    left: 254px;
+    top: 92px;
+  }
+  .open-big-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .join-title {
+      width: 600px;
+      padding: 15px 0;
+      background-color: #2b19d1;
+      margin-top: 25px;
+    }
+    .advantage-title {
+      color: #f0ff01;
+    }
+    .free-open-btn {
+      width: 203px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      display: inline-block;
+      opacity: 0.9;
+      color: #fefefe;
+      border: solid 1px #eeeeee;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+// 入驻信息
+.join-head {
+  height: 84px;
+  line-height: 84px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 15px;
+  background-color: #ffffff;
+  .join-head-step {
+    margin-left: 180px;
+    letter-spacing: 3px;
+    position: relative;
+   .step-link-line {
+      width: 160px;
+      height: 2px;
+      background-color: #b5b5b5;
+      position: absolute;
+      top: 50%;
+      right: -168px;
+      margin-top: -1px;
+    }
+    .on {
+      color: #da0f0f;
+    }
+  }
+}
+.display-flex {
+  display: felx;
+}
+// 企业入驻信息表单
+.join-info-box {
+  padding: 10px;
+  background-color: #fff;
+  .join-info-form {
+    border: 1px solid #d2d2d2;
+    // 输入框标签
+    .basic-info-label {
+      width: 156px;
+      display: inline-block;
+      text-align: right;
+      .basic-info-title {
+        position: relative;
+        display: inline-block;
+        .star-icon {
+          position: absolute;
+          left: -15px;
+          top: 2px;
+          color: #e10505;
+        }
+      }
+    }
+    // 基本信息样式
+    .join-basic-info {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #d2d2d2;
+      .basic-info-left, .basic-info-right {
+        width: 50%;
+        padding: 30px 0;
+      }
+      // 错误提示
+      .el-form-item__error {
+        padding-top: 10px;
+      }
+      // 输入框样式
+      .basic-info-input {
+        width: 312px;
+        height: 28px;
+        line-height: 26px;
+        border: 1px solid #b5b5b5;
+        position: relative;
+        margin-bottom: 0;
+        .title-notice {
+          position: absolute;
+          top: 38px;
+          left: 0;
+        }
+        input {
+          width: 100%;
+          height: 22px;
+          border: 0;
+        }
+        .input-info {
+          height: 28px;
+          line-height: 28px;
+        }
+        .el-input__prefix, .el-input__suffix {
+          top: -6px;
+        }
+        .el-form-item__content {
+          line-height: 0;
+        }
+      }
+      .basic-info-input.look-info {
+        border: 0;
+        .el-input.is-disabled .el-input__inner {
+          background-color: transparent;
+        }
+      }
+      
+      // 地址
+      /deep/ .info-address-box {
+        .area-select-wrap .area-select {
+          margin-left: 0;
+        }
+        .area-select {
+          height: 28px;
+        }
+        .area-select .area-selected-trigger {
+           padding: 4px 20px 4px 12px;
+        }
+      }
+      .info-address-input {
+        margin: 20px 0 0 155px;
+      }
+    }
+    // 上传证件照样式
+    .upload-id-img {
+      padding: 30px 10px;
+      .upload-img-box {
+        display: flex;
+        justify-content: center;
+        .upload-box {
+          width: 345px;
+          margin-right: 80px;
+        }
+        .upload-need-box, .upload-demo-box {
+          width: 100%;
+          height: 219px;
+          background-color: #ffffff;
+          border-radius: 3px;
+          border: solid 1px #d2d2d2;
+          // upload框
+          .avatar-uploader .el-upload {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+          }
+          .uploader-icon {
+            font-size: 40px;
+            color: #c8c8c8;
+            font-weight: bolder;
+            width: 345px;
+            height: 219px;
+            line-height: 219px;
+            text-align: center;
+            position: relative;
+            .uploadr-logo {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+            }
+          }
+          .avatar {
+            width: 343px;
+            height: 217px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  // 提交审核按钮
+  .submit-info-btn {
+    width: 192px;
+    height: 53px;
+    line-height: 53px;
+    background-color: #2b19d1;
+    border-radius: 5px;
+    margin: 35px 0 45px 190px;
+  }
+}

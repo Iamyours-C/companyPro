@@ -1,0 +1,195 @@
+// 购物车样式
+@title-color: #ff2a00;
+@cart-price-color: #d90202;
+.shop-cart-box {
+  .shop-cart {
+    display: none;
+  }
+  .search-box {
+    float: right;
+    margin-right: 0;
+  }
+}
+.cart-box {
+  margin-top: 30px;
+  & .cart-title {
+    color: @title-color;
+    font-weight: bold;
+    width: 200px;
+    border-bottom: 1px solid @title-color;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  & .cart-choose {
+    .all-price {
+      color: @cart-price-color;
+    }
+    .pay-top {
+      display: inline-block;
+      background: #ff3600;
+      padding: 2px 10px;
+      margin-left: 15px;
+    }
+  }
+}
+// 分割线
+.cart-line {
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: -1px;
+}
+// 加购商品样式
+// 选择框
+.checked-input {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d2d2d2;
+  vertical-align: middle;
+}
+.cart-goods {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+  .checked-title {
+    display: flex;
+    justify-content: space-between;
+    .cart-operate {
+      display: inline-block;
+      width: 200px;
+      text-align: right;
+    }
+    .cart-title {
+      width: 182px;
+      text-align: right;
+    }
+  }
+  // 商品店铺名字
+  .cart-store-name {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+  .add-goods {
+    padding: 20px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    // 商品图片
+    .add-goods-img {
+      width: 150px;
+      height: 150px;
+      padding: 8px 0;
+      border: 1px solid #efefef;
+      text-align: center;
+      margin-left: 15px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    // 商品信息
+    .goods-info {
+      width: 200px;
+      margin-left: 28px;
+    }
+    // 单价
+    .unit-price {
+      width: 130px;
+      text-align: center;
+      margin-left: 30px;
+    }
+    // 数量
+    .add-num {
+      width: 80px;
+      height: 25px;
+      text-align: center;
+      margin-left: 105px;
+      .cut-plus, .add-plus {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #dcdcdc;
+        cursor: pointer;
+      }
+      .plus-num {
+        width: 38px;
+        border: 1px solid #bfbfbf;
+        .plus-input {
+          width: 36px;
+          border: 0;
+          text-align: center;
+          background: transparent;
+        }
+      }
+    }
+    // 金额
+    .plus-price {
+      margin-left: 140px;
+      color: #ff3600;
+    }
+    // 操作
+    .add-operate {
+      padding-right: 20px;
+      line-height: 24px;
+    }
+  }
+  .add-goods.hide-border {
+    border-bottom: 0;
+  }
+  // 选中框激活状态样式
+  input[type=checkbox]:checked:after {
+    color: red;
+  }
+}
+// 购物车底部
+.cart-bottom {
+  margin-top: 60px;
+  margin-bottom: 140px;
+  background: #e2e0e2;
+  .checked-input {
+    margin: 0 20px;
+    background: #fff;
+  }
+  .bottom-operate {
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  // 结算按钮
+  .submit-price {
+    display: inline-block;
+    width: 160px;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    background: #ff3802;
+    cursor: pointer;
+  }
+  .sub-price {
+    color: #ff3802;
+    padding-right: 40px;
+  }
+}
+// 购物车没有数据时显示
+.cart-show {
+  min-height: 400px;
+  position: relative;
+  .cart-icon-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .cart-icon {
+      width: 220px;
+      height: 220px;
+      img {
+        max-width: 100%;
+      }
+    }
+    // 提示
+    .warning-notice {
+      color: #a2b5be;
+    }
+  }
+}

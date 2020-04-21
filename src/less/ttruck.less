@@ -1,0 +1,797 @@
+// 货车入驻样式
+.img {
+  width: 100%;
+  height: 100%;
+}
+@manage-main-color: #d90202;
+// 审核信息通用按钮按钮
+// 通用按钮1
+.return-btn {
+  display: inline-block;
+  width: 160px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 24px;
+  background-color: #ececed;
+  letter-spacing: 2px;
+}
+// 通用按钮2
+.basic-btn {
+  display: inline-block;
+  width: 170px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #2b19d1;
+  font-size: 20px;
+}
+// 货车入驻标题
+.info-header {
+  height: 77px;
+  line-height: 77px;
+  color: #fff;
+  background-color: @manage-main-color;
+  font-size: 24px;
+  font-weight: bold;
+}
+// 货车入驻-->首页
+.truck-index {
+  // 第一部分
+  .truck-index-head {
+    margin-top: 30px;
+    line-height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     // logo
+    .logo-box {
+      width: 154px;
+      height: 76px;
+    }
+    // 入驻入口
+    .come-in {
+      // width: 110px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .come-in-item {
+        margin-right: 32px;
+        cursor: pointer;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  // 第二部分
+  .truck-banner {
+    .truck-banner-box {
+      .truck-banner-slider {
+        .truck-banner-item {
+          height: 600px;
+        }
+      }
+    }
+  }
+  // 第三部分
+  /deep/ .truck-content {
+    height: 164px;
+    background-color: #d90202;
+    // 选择货车或找货源
+    .truck-tabs {
+      border-bottom: 1px solid #fff;
+      .truck-tab {
+        width: 190px;
+        height: 128px;
+        text-align: center;
+        background-color: transparent;
+        cursor: pointer;
+        &.actives {
+          background-color: #01526d;
+        }
+      }
+      .truck-tab:first-child {
+        .find-truck {
+          margin-top: 10px;
+        }
+      }
+    }
+    // 货车类型
+    .truck-type-lists {
+      display: flex;
+      flex-direction: row;
+      height: 35px;
+      line-height: 35px;
+      .truck-type-list {
+        width: 190px;
+        font-size: 14px;
+        background-color: transparent;
+        &.on {
+          background-color: #01526d;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  // 第四部分
+  // 货车信息
+  .truck-info {
+    min-height: 483px;
+    .truck-info-lists {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      // justify-content: space-around;
+      .truck-info-list {
+        width: 24%;
+        margin-top: 18px;
+        margin-right: 12px;
+        background-color: #fff;
+        // 货车图
+        .truck-info-img {
+          height: 180px;
+          border-radius: 6px;
+          vertical-align: middle;
+          line-height: 180px;
+          overflow: hidden;
+        }
+        .truck-info-box {
+          padding: 15px;
+          min-height: 285px;
+          // 车辆详细信息
+          .truck-info-detail {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            line-height: 26px;
+            margin-top: 25px;
+            .info-detail-item {
+              width: 50%;
+            }
+          }
+          // 定位
+          .auto-position {
+            color: #01526d;
+          }
+          // 起步价
+          .start-price {
+            color: #d90202;
+          }
+          // 预约 立即用车按钮
+          .book-truck-btn, .use-truck-btn {
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            color: #fff;
+            border-radius: 6px;
+            padding: 0 14px;
+          }
+          .book-truck-btn {
+            background-color: #2b19d1;
+          }
+          .use-truck-btn {
+            background-color: #d90202;
+          }
+        }
+      }
+    }
+  }
+  // 找货信息
+  .find-origin {
+    .find-origin-lists {
+      .find-origin-list {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #d5d5d5;
+        padding: 20px 0;
+        .origin-img {
+          width: 20%;
+        }
+        .find-origin-info {
+          width: 40%;
+          line-height: 32px;
+          letter-spacing: 2px;
+          .origin-info-name {
+            display: flex;
+            flex-direction: row;
+            .info-name-item {
+              width: 50%;
+            }
+          }
+          .send-address {
+            color: #2b19d1;
+          }
+          .accept-address {
+            color: #d90202;
+          }
+        }
+        // 默认
+        .origin-item-btn {
+          width: 40%;
+        }
+        .take-order-btn {
+          display: inline-block;
+          width: 78px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          background-color: #ccc;
+          border-radius: 12px;
+          color: #fff;
+          letter-spacing: 2px;
+          font-size: 16px;
+        }
+        // 已抢单
+        .have-order {
+          background-color: #2b19d1;
+        }
+        // 可以抢单
+        .have-chance {
+          background-color: #d90202;
+        }
+      }
+    }
+  }
+  // 预约弹框
+  .book-window {
+    // 收货地址列表
+    .address-lists {
+      .is-selected {
+        color: #1989FA;
+      }
+    }
+    // 日期时间选择
+    .el-date-editor.el-input {
+      width: 100%;
+    }
+  }
+}
+// 货车入驻-->司机信息
+.driver-info-form {
+  background-color: #fff;
+  // 姓名 电话
+  .info-form-item {
+    border-bottom: 2px solid #eae7e7;
+    .input-box {
+      display: flex;
+      flex-direction: row;
+      line-height: 100px;
+      .input-box-name, .input-box-tel {
+        width: 240px;
+        text-align: right;
+        color: #666;
+        font-size: 18px;
+      }
+      .input-content .el-input__inner {
+          width: 100%;
+          font-size: 18px;
+          background-color: transparent;
+          outline: 0;
+          color: #666;
+          border-color: transparent;
+          text-align: left;
+      }
+      input::placeholder {
+          color: #dbdbdb;
+      }
+    }
+    // 错误提示
+    .el-form-item__error {
+      left: 20%;
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
+  // 上传证件照样式
+  .upload-id-img {
+    padding: 30px 10px;
+    .upload-img-box {
+      display: flex;
+      justify-content: center;
+      .upload-box {
+        width: 345px;
+        margin-right: 80px;
+      }
+      .upload-need-box, .upload-demo-box {
+        width: 100%;
+        height: 219px;
+        background-color: #ffffff;
+        border-radius: 3px;
+        border: solid 1px #d2d2d2;
+        // upload框
+        .avatar-uploader .el-upload {
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+        }
+        .uploader-icon {
+          font-size: 40px;
+          color: #c8c8c8;
+          font-weight: bolder;
+          width: 345px;
+          height: 219px;
+          line-height: 219px;
+          text-align: center;
+          position: relative;
+          .uploadr-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+        .avatar {
+          width: 343px;
+          height: 217px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+// 货车入驻-->货车信息以及审核通过的样式
+.certify-truck, .finish-truck-info {
+  // 货车审核信息样式
+  .truck-info-box {
+    background-color: #fff;
+    padding: 20px 50px;
+    .truck-form-item {
+      margin-bottom: 40px;
+      .truck-input-title {
+        width: 205px;
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+        font-size: 20px;
+        color: #666;
+        text-align: right;
+        margin-right: 60px;
+      }
+      .truck-input-box {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        .truck-input-content {
+          width: 100%;
+          background-color: #f7f6f6;
+          border: 1px solid #bfbfbf;
+          input {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            font-size: 16px;
+            background-color: transparent;
+          }
+          // 下拉按钮
+          .drop-down-btn {
+            width: 80px;
+            height: 48px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #e5e4e4;
+            border-left: 1px solid #d1d0d0;
+            color: #666;
+            position: absolute;
+            top: 0.8px;
+            right: 1px;
+            bottom: 1px;
+            .el-icon-arrow-down  {
+              line-height: 0;
+            }
+          }
+          .drop-down-lists {
+            width: 120px;
+            color: #666;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            z-index: 100;
+            border: 1px solid #eee;
+            box-shadow: 0 1px 2px #ccc;
+            .drop-item {
+              height: 35px;
+              line-height: 35px;
+              background-color: #fff;
+              font-size: 12px;
+              padding-left: 15px;
+            }
+            .drop-item:hover {
+              background-color: #5897FB;
+              color: #fff;
+            }
+          }
+        }
+        // 长宽高
+        .specify-truck {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .truck-params {
+            width: 30%;
+          }
+        }
+      }
+      // 上传图片
+      .uploader-transport {
+        display: flex;
+        flex-direction: row;
+        // 错误提示信息
+        .avatar-uploader {
+          width: 100%;
+        }
+        .avatar-uploader .el-upload {
+          border: 1px solid #d9d9d9;
+          border-radius: 6px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+        }
+        .avatar-uploader-icon {
+          font-size: 60px;
+          color: #8c939d;
+          width: 300px;
+          height: 300px;
+          line-height: 300px;
+          text-align: center;
+        }
+        .uploader-text {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .avatar {
+          width: 300px;
+          height: 300px;
+          display: block;
+          z-index: 999;
+        }
+      }
+    }
+    .submit-certify {
+      margin-top: 180px;
+      margin-bottom: 100px;
+      .submit-certify-btn {
+        width: 220px;
+        height: 80px;
+        display: inline-block;
+        line-height: 80px;
+        text-align: center;
+        color: #fff;
+        font-size: 26px;
+        background-color: #2b19d1;
+        letter-spacing: 4px;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+// 非空验证提示信息
+.el-form-item__error {
+  left: 20%;
+  font-size: 14px;
+}
+.finish-truck-info {
+  .truck-pass-img {
+    width: 100%;
+    // 审核通过照片
+    .pass-img-box {
+      width: 300px;
+      height: 300px;
+      line-height: 300px;
+      vertical-align: middle;
+      overflow: hidden;
+      border-radius: 6px;
+      border: 1px solid #d9d9d9;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  // 操作按钮
+  .operate-btns {
+    margin-top: 160px;
+    margin-bottom: 60px;
+    .book-truck-btn, .use-truck-btn {
+      width: 200px;
+      height: 60px;
+      display: inline-block;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .book-truck-btn {
+      background-color: #2b19d1;
+      margin-right: 30px;
+    }
+    .use-truck-btn {
+      background-color: @manage-main-color;
+    }
+  }
+  .el-date-editor.el-input {
+    width: 100%;
+  }
+  .send-address {
+    .el-form-item__label {
+      color: #2b19d1;
+    }
+  }
+  .accept-address {
+    .el-form-item__label {
+      color: @manage-main-color;
+    }
+  }
+  // 选择收货地址
+  .choose-accept-add {
+    margin-top: 50px;
+  }
+  .confirm-btn {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    background-color: @manage-main-color;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+// 货车入驻-->车主/货车审核
+// 审核失败
+.certify-box {
+  .certify-status {
+    padding-bottom: 164px;
+    background-color: #fff;
+    // title部分
+    .certify-status-notice {
+      height: 88px;
+      border-bottom: 2px solid #2b19d1;
+      position: relative;
+      .certify-status-title {
+        width: 322px;
+        height: 40px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        z-index: 999;
+        text-align: center;
+      }
+    }
+    // 状态标志
+    .certify-status-logo {
+      .return-btn.failed-btn {
+        background-color: #2b19d1;
+      }
+      margin-top: 92px;
+      // 错误
+      .failed-circle, .certifying-circle {
+        width: 176px;
+        height: 176px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 176px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      // 错误提示
+      .failed-text {
+        color: #d90202;
+      }
+      // 待审核
+      .waiting-text {
+        color: #01526d;
+      }
+      .success-text {
+        color: #01526d;
+      }
+      // 驳回原因
+      .refuse-reason {
+        width: 525px;
+        line-height: 28px;
+        display: inline-block;
+      }
+    }
+  }
+}
+//审核成功
+.certify-success {
+  .success-status {
+    background-color: #fff;
+    min-height: 990px;
+    .success-status-icon {
+      display: inline-block;
+      margin-top: 204px;
+    }
+    .success-text {
+      color: #01526d;
+      margin-top: 45px;
+    }
+  }
+}
+// 货车入驻成功-->我的货车
+.truck-center {
+  // 管理按钮组
+  .manage-btn {
+    width: 130px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ccc;
+  }
+  // 我的抢单按钮
+  .take-order-btn {
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background-color: #c8c8c8;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  // 分割空白
+  .truck-center-space {
+    height: 60px;
+    background-color: transparent;
+  }
+  // tab
+  .truck-center-tab {
+    height: 70px;
+    line-height: 70px;
+    background-color: @manage-main-color;
+    color: #fffefe;
+    .truck-tab-lists {
+      display: flex;
+      flex-direction: row;
+      .truck-tab-list {
+        width: 192px;
+        text-align: center;
+        font-size: 20px;
+        background-color: transparent;
+      }
+      .actived {
+        background-color: #01526d;
+      }
+    }
+  }
+  // 车信息
+  .truck-center-cont {
+    .truck-manage-list, .book-manage-list {
+      padding-top: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #eeeeee;
+    }
+    // 货车管理
+    .truck-manage-lists {
+      .truck-manage-list {
+        display: flex;
+        justify-content: space-between;
+        .truck-info-show {
+          display: flex;
+          flex-direction: row;
+          .truck-img-box {
+            width: 290px;
+            height: 181px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 6px;
+            }
+          }
+        }
+        .truck-status-info {
+          display: flex;
+          flex-direction: column;
+          // 信息
+          .manage-truck-info {
+            line-height: 30px;
+            letter-spacing: 4px;
+          }
+          .certify-status-btn {
+            border-radius: 24px;
+            cursor: not-allowed;
+          }
+        }
+        
+        // 按钮组
+        .manage-btns {
+          // 编辑
+          .edit-btn {
+            background-color: #2b19d1;
+          }
+          // 删除
+          .delete-btn {
+            background-color: @manage-main-color;
+          }
+        }
+      }
+    }
+    // 预约管理
+    .book-manage-lists {
+      min-height: 252px;
+      .book-manage-list {
+        .book-manage-img {
+          width: 322px;
+          height: 186px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+          }
+        }
+        .book-truck-info {
+          line-height: 30px;
+          letter-spacing: 4px;
+          // 发货地址
+          .send-address {
+            color: #2b19d1;
+          }
+          // 收货地址
+          .accept-address {
+            color: @manage-main-color;
+          }
+          .address-info {
+            letter-spacing: 0;
+          }
+        }
+        // 按钮组
+        .manage-btns {
+          .accept-btn {
+            background-color: @manage-main-color;
+          }
+          .refuse-btn {
+            background-color: #2b19d1;
+          }
+        }
+      }
+    }
+    // 我的抢单
+    .take-oreder-lists {
+      .take-oreder-list {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #d5d5d5;
+        padding: 20px 0;
+        .take-oreder-info {
+          line-height: 32px;
+          letter-spacing: 2px;
+        }
+        .take-info-name {
+          display: flex;
+          flex-direction: row;
+          .take-name-item {
+            width: 50%;
+          }
+        }
+        .send-address {
+          color: #2b19d1;
+        }
+        .accept-address {
+          color: #d90202;
+        }
+        // 完成按钮
+        .finish-btn {
+          background-color: #2b19d1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,372 @@
+// 我的店铺样式
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+// 立即购买按钮
+.buy-now-btn {
+  width: 120px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background-color: #2b16da;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.saler-shop {
+  // 店铺信息
+  .shop-name {
+    // height: 80px;
+    padding: 25px 0;
+    padding-bottom: 15px;
+    // logo
+    .shop-logos {
+      .shop-logo-box {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 6px;
+        overflow: hidden;
+        vertical-align: middle;
+        img {
+          width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+    .shop-titles {
+      display: flex;
+      flex-direction: column;
+      line-height: 40px;
+      .shop-name-bottom {
+        .describ-detail {
+        }
+      }
+    }
+  }
+  // 分割线
+  .space-line {
+    height: 1px;
+    background-color: #212122;
+  }
+  // 店铺logo
+  .shop-logo {
+    padding-bottom: 20px;
+    .logo-img {
+      display: inline-block;
+      height: 150px;
+      vertical-align: middle;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  // 导航
+  .shop-navigation {
+    height: 55px;
+    background-color: #014c66;
+    .shop-navigation-lists {
+      display: flex;
+      flex-direction: row;
+      line-height: 55px;
+      color: #fefefe;
+      .shop-navigation-list {
+        padding: 0 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  // banner部分
+  .shop-banner-box {
+    position: relative;
+    .shop-banner {
+      height: 400px;
+    }
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+    }
+    // 立即抢购按钮
+    .buy-now {
+      width: 260px;
+      height: 72px;
+      line-height: 72px;
+      text-align: center;
+      color: #9a0b0f;
+      background-color: #fff;
+      position: absolute;
+      left: 29%;
+      bottom: 58px;
+      letter-spacing: 2px;
+    }
+  }
+  // 导航
+  .shop-nav {
+    height: 88px;
+    background-color: #d90202;
+    .shop-nav-lists {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      .shop-nav-list {
+        width: 130px;
+        margin-right: 35px;
+        line-height: 88px;
+        text-align: center;
+        font-size: 24px;
+        .active {
+          font-size: 32px;
+          font-weight: bold;
+          background: linear-gradient(to bottom, #fff, yellow);
+          -webkit-background-clip: text;
+          color: transparent;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  // 第一部分商品开始
+  .shop-goods-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: 45px;
+    .goods-top-detail {
+      width: 31%;
+      // 商品图
+      .goods-top-img {
+        height: 440px;
+        padding: 25px 55px;
+        background-color: #fff;
+        border-radius: 20px 20px 0px 0px;
+  	    border: solid 1px #ccc;
+      }
+      // 描述
+      .goods-top-describ{
+        height: 120px;
+        background-color: #e7e5da;
+        border-radius: 0px 0px 20px 20px;
+        padding: 20px 30px;
+        position: relative;
+        .goods-title {
+          width: 142px;
+          font-family: Adobe 黑体 Std;
+          color: #351100;
+          cursor: default;
+        }
+        .goods-price {
+          color: #351100;
+        }
+        .buy-now-btn {
+          position: absolute;
+          right: 22px;
+          bottom: 30px;
+        }
+      }
+    }
+  }
+  
+  // 第二部分商品开始
+  .shop-goods-special {
+    display: flex;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 65px 0;
+    .special-goods {
+      width: 22%;
+      // 图
+      .special-goods-img {
+        height: 267px;
+        background-color: #fefefe;
+        border-radius: 40px;
+        border: solid 1px #d2d2d2;
+        padding: 10px 40px;
+      }
+      // 名字
+      .special-goods-name {
+        letter-spacing: 1px;
+  	    color: #002337;
+      }
+    }
+  }
+  
+  // 第三部分商品开始
+  .shop-goods-feed {
+    display: none;
+    // 猪饲料标题线
+    .feed-line {
+      height: 1px;
+      border: solid 1px #918a6d;
+      position: relative;
+      .feed-name-box {
+        width: 400px;
+        position: absolute;
+        left: 50%;
+        top: -40px;
+        margin-left: -200px;
+        z-index: 100;
+        color: #201a00;
+        background-color: #f7f6fd;
+        .feed-name {
+          font-size: 59px;
+          letter-spacing: 22px;
+        }
+        .english-name {
+          letter-spacing: 11px;
+        }
+      }
+      // 小正方形
+      .feed-name-shape {
+        width: 18px;
+        height: 18px;
+        background-color: #918a6d;
+        position: absolute;
+        top: 30px;
+        transform: rotate(45deg);
+        z-index: 100;
+      }
+      .shap-left {
+        left: 0;
+      }
+      .shape-right {
+        right: 0;
+      }
+    }
+    // 商品盒子
+    .feed-goods {
+      margin-top: 100px;
+      .feed-big-box {
+        width: 660px;
+        height: 618px;
+        background-color: #fefefe;
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+        padding: 30px 45px;
+      }
+      // 饲料卡片
+      .feed-goods-card {
+        width: 460px;
+        height: 156px;
+        background-color: #ffeed1;
+        border-radius: 10px;
+        border: 6px solid #98709e;
+        opacity: 0.7;
+        .goods-card-left {
+          padding: 20px 10px;
+          letter-spacing: 1px;
+          .card-left-name {
+            color: #5a4d0f;
+          }
+          .card-goods-text {
+            color: #62530b;
+          }
+          .card-goods-price {
+            color: #472403;
+          }
+        }
+        .buy-now-btn {
+          background-color: #6a376d;
+          margin-top: 66px;
+          margin-right: 20px;
+        }
+      }
+      // 小框
+      .feed-goods-small {
+        width: 469px;
+        height: 433px;
+        background-color: #fefefe;
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+      }
+    }
+  }
+  
+  // 第四部分商品开始
+  .shop-goods-series {
+    // 标题
+    .goods-series-head {
+      height: 76px;
+      line-height: 76px;
+      background-color: #d60202;
+      letter-spacing: 8px;
+      padding-left: 15px;
+    }
+    // 商品内容样式
+    .goods-series-body{
+      .goods-series-lists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        & .goods-box {
+          width: 18%;
+          border: 10px solid #e2e1e1;
+          position: relative;
+          margin: 20px 10px;
+          // 商品图片
+          .goods-series-img {
+            width: 100%;
+            height: 200px;
+            padding: 10px 25px;
+            margin: 0 auto;
+            background-color: #fff;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          // 描述
+          .goods-describ {
+            border-top: 1px solid #f1f1f1;
+            background: #f7f6fd;
+            padding: 10px 20px;
+            line-height: 26px;
+            cursor: pointer;
+            .goods-price {
+              color: #b60000;
+            }
+          }
+          // 买三送一标志
+          .goods-mark-t, .goods-mark-c {
+            background: #d93002;
+          }
+          .goods-mark-t {
+            width: 52px;
+            height: 8px;
+            position: absolute;
+            right: 5px;
+            top: -8px;
+            border-radius: 5px 5px 0 0;
+          }
+          .goods-mark-c {
+            width: 42px;
+            height: 24px;
+            position: absolute;
+            top: 0;
+            right: 15px;
+            font-size: 10px;
+            color: #fffdfd;
+            text-align: center;
+            line-height: 24px;
+            letter-spacing: 1px;
+          }
+          .goods-mark-b {
+            border: 20px solid transparent;
+            border-top-color: #d93002;
+            position: absolute;
+            right: 16px;
+            top: 24px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+// 新品上市样式
+@new-main-color: #d90202;
+@new-goods-price: #b60000;
+@bg-white: #fff;
+.img {
+  width: 100%;
+  height: 100%;
+}
+.new-release {
+  .new-btn {
+    display: inline-block;
+    background: @new-main-color;
+  }
+  .new-line {
+    margin-top: -1px;
+    border-bottom: 1px solid @new-main-color;
+  }
+  .new-release-title {
+    display: flex;
+    flex-direction: row;
+  }
+  // 导航
+  .new-nav-lists {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+    .new-nav-list {
+      margin: 0 7px;
+      .active {
+        color: @new-main-color;
+        border-bottom: 0;
+      }
+    }
+  }
+  // 内容开始
+  .new-release-box {
+    .new-release-cont {
+      background: url(../img/new-bg.png) center no-repeat;
+      background-size: 100%;
+      background-position: top;
+      padding-top: 40px;
+      padding-bottom: 65px;
+      // banner部分
+      .pro-banner {
+        width: 100%;
+        text-align: center;
+        .swiper-slide {
+          text-align: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          transition: 300ms;
+          transform: scale(0.8);
+        }
+         .swiper-slide-next {
+          transform: scale(1);
+        }
+        // 轮播商品
+        .new-slide-list {
+          border: 10px solid #e2e1e1;
+          .new-list-img {
+            padding: 25px 35px;
+            height: 370px;
+            background-color: #fff;
+          }
+          // 商品详细信息
+          .new-goods-describ {
+            padding: 10px 25px;
+            background-color: #f7f6fd;
+            // 价格
+             .new-goods-price {
+               color: #b60000;
+             }
+            //  商品名字
+            .new-goods-name {
+              height: 44px;
+            }
+            // 店铺名称
+            .new-goods-store {}
+          }
+        }
+      }
+      // 商品列表样式
+      .new-goods-lists {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 70px;
+        margin-top: 252px;
+        & .new-goods-box {
+          width: 18%;
+          border: 10px solid #e2e1e1;
+          position: relative;
+          margin: 30px 10px;
+          margin-bottom: 0;
+          // 商品图片
+          .new-goods-img {
+            height: 190px;
+            padding: 10px 25px;
+            display: inline-block;
+            background-color: @bg-white;
+          }
+          // 描述
+          .new-goods-describ {
+            border-top: 1px solid #f1f1f1;
+            background: #f7f6fd;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: -1px;
+            .new-goods-price {
+              color: @new-goods-price;
+            }
+            .new-goods-store {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              line-height: 14px;
+            }
+            .new-goods-name,.new-goods-store {
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

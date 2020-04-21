@@ -1,0 +1,154 @@
+// 步骤条样式
+@step-default-bg: #a8c4cd;
+@step-active-bg: #01526d;
+// 下一步按钮背景色
+@next-btn-bg: #0d19b0;
+// 文字主色调
+@login-main-color: #01526d;
+.step-lists {
+  & .step {
+    width: 400px;
+    height: 78px;
+    line-height: 78px;
+    float: left;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    .trangle-white {
+      position: absolute;
+      top: 0;
+      right: -78px;
+      border: 39px solid transparent;
+      border-left-color: #fff;
+      z-index: 100;
+    }
+    .trangle-blue {
+      position: absolute;
+      top: 0;
+      right: -74px;
+      border: 39px solid transparent;
+      border-left-color: @step-active-bg;
+      z-index: 999;
+    }
+    .change-shape.trangle-blue  {
+      border-left-color: @step-default-bg;
+    }
+  }
+  .forget-step {
+    background-color: @step-default-bg;
+  }
+  .forget-step-active {
+    background-color: @step-active-bg;
+  }
+}
+
+// 第一步
+.first-content {
+  & .operate-notice {
+    color: @login-main-color;
+    padding: 30px 0 20px 0;
+  }
+  & .form-info {
+    width: 450px;
+    .form-item {
+      margin-bottom: 10px;
+      & .el-input {
+        width: 280px;
+      }
+      .check-code {
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #DCDFE6;
+        letter-spacing: 3px;
+        cursor: pointer;
+        margin-left: 20px;
+        border-radius: 4px;
+      }
+      .code-change {
+        color: #0d19b0;
+        font-size: 20px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .express {
+      width: 100%;
+      color: #cc1717;
+    }
+    .circle-express {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid #cc1717;
+      text-align: center;
+      line-height: 10px;
+    }
+  }
+}
+.next-btn {
+  width: 280px;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+  color: #fffefe;
+  line-height: 60px;
+  background: @next-btn-bg;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 60px 0;
+}
+
+// 第二步
+// .second-box {
+//   .step-lists {
+//     .forget-step {
+//       .trangle-white, .trangle-blue {
+//         left: 0;
+//       }
+//     }
+//   }
+// }
+.second-content {
+  .form-sub {
+    margin-top: 65px;
+  }
+  .form-pass {
+    & .el-form-item__content {
+      width: 400px;
+    }
+    & .el-form-item__label {
+      color: @login-main-color;
+      font-size: 16px;
+    }
+  }
+}
+
+// 第三步
+.third-content {
+  text-align: center;
+  margin-top: 100px;
+  & .finish {
+    display: inline-block;
+    width: 268px;
+    height: 268px;
+    background: @step-active-bg;
+    color: #fff;
+    text-align: center;
+    line-height: 268px;
+    border-radius: 50%;
+  }
+  & .finish-text {
+    width: 290px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 36px;
+  }
+}
+.next-btn.submit-btn {
+  display: inline-block;
+}

@@ -1,0 +1,23 @@
+// 首页 搜索页通用导航
+.index-content {
+  // 导航条样式
+  height: 40px;
+  background: #d90202;
+  line-height: 40px;
+  .nav-lists {
+      .nav-list {
+          width: 145px;
+          float: left;
+          position: relative;
+      }
+      & .split-dot {
+          position: absolute;
+          right: 0;
+          font-size: 40px;
+      }
+      .nav-list.on {
+          width: 200px;
+          background: #2b19d1;
+      }
+  }
+}

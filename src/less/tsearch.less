@@ -1,0 +1,187 @@
+// 搜索页样式
+@bg-white: #fff;
+@search-goods-price: #b60000;
+.img {
+  width: 100%;
+  height: 100%;
+}
+// 搜索便捷入口
+// .search-menu-lists {
+//   width: 200px;
+//   min-height: 420px;
+//   padding: 0 5px;
+//   border: 1px solid #2b19d1;
+//   .search-menu-list {
+//     padding: 15px 0;
+//     border-bottom: 1px solid #0000ff;
+//     .main-title {
+//       color: #d95302;
+//     }
+//     .search-vice-menu {
+//       width: 140px;
+//       display: flex;
+//       justify-content: flex-start;
+//       flex-wrap: wrap;
+//     }
+//   }
+//   .search-menu-list:last-child {
+//     border-bottom: 0;
+//   }
+// }
+// 热门推荐
+// .search-hot {
+//   width: 988px;
+//   min-height: 409px;
+//   margin: 12px;
+//   margin-right: 0;
+//   border: 1px solid #d2d2d2;
+//   background-color: #fff;
+//   .search-hot-title {
+//     height: 40px;
+//     line-height: 40px;
+//     padding-left: 15px;
+//     margin-top: 20px;
+//     background: linear-gradient(#d90202 50%, #2b19d1 50%);
+//     -webkit-background-clip: text;
+//     color: transparent;
+//   }
+//   .search-hot-lists {
+//     display: flex;
+//     justify-content: flex-start;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     .search-hot-list {
+//       width: 31%;
+//       margin: 22px 0;
+//       margin-left: 15px;
+//       .search-hot-cont {
+//         .hot-release-img {
+//           width: 124px;
+//           height: 124px;
+//           padding: 12px 22px;
+//           background-color: #ffffff;
+//           border: solid 1px #d2d2d2;
+//         }
+//         .hot-release-detail {
+//           width: 165px;
+//           .hot-release-icon, .hot-release-unit {
+//             color: #cd4444;
+//           }
+//           .hot-release-price {
+//             color: #b60000;
+//           }
+//         }
+//         .look-more-btn {
+//           width: 80px;
+//           height: 30px;
+//           line-height: 30px;
+//           background-color: #ff0000;
+//           border-radius: 6px;
+//         }
+//       }
+//     }
+    
+//   }
+  
+// }
+// 推荐搜索热词
+.search-recommend {
+  display: none;
+  background-color: @bg-white;
+  padding: 5px;
+  .search-scope, .search-tips {
+    height: 46px;
+    line-height: 46px;
+  }
+  // 搜索词条
+  .search-tips {
+    background-color: #efeeee;
+    .search-tip-lists {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+  }
+  // 搜索价格范围
+  .search-scope {
+    margin-top: 5px;
+    background-color: @bg-white;
+    border: solid 1px #d2d2d2;
+    .search-scope-price {
+      .search-price-input {
+        width: 62px;
+        height: 30px;
+        background-color: @bg-white;
+        border: solid 1px #d2d2d2;
+        position: relative;
+        margin: 7px 0;
+        input {
+          width: 60px;
+          height: 28px;
+          border: 0;
+          background-color: @bg-white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+// 商品列表样式
+.search-goods-lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  & .search-goods-box {
+    width: 18%;
+    border: 10px solid #e2e1e1;
+    position: relative;
+    margin: 20px 12px;
+    // 商品图片
+    .search-goods-img {
+      width: 100%;
+      height: 200px;
+      padding: 10px 25px;
+      margin: 0 auto;
+      background-color: @bg-white;
+    }
+    // 描述
+    .search-goods-describ {
+      border-top: 1px solid #f1f1f1;
+      background: #f7f6fd;
+      padding: 10px 20px;
+      cursor: pointer;
+      .search-goods-price {
+        color: @search-goods-price;
+      }
+      // 包邮
+      .package-mail {
+        display: inline-block;
+        width: 35px;
+        height: 15px;
+        padding: 0 2px;
+        text-align: center;
+        line-height: 15px;
+        background-color: #b61f24;
+      }
+      // 如实描述
+      .realy-describ {
+        display: inline-block;
+        height: 15px;
+        line-height: 15px;
+        border: 1px solid #999;
+        .realy-describ-percent {
+          color: #02ac0e;
+        }
+      }
+      .search-goods-name,.search-goods-store {
+        margin-top: 4px;
+      }
+    }
+  }
+}

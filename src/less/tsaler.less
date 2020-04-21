@@ -1,0 +1,486 @@
+// 卖家中心样式
+// 侧边栏激活状态字体颜色
+@saler-sidebar-active: #d51919;
+.img {
+  width: 100%;
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.saler-center-box {
+  display: flex;
+  flex-direction: row;
+}
+.sidbar-cont {
+  display: flex;
+  flex-direction: column;
+  width: 204px;
+}
+.saler-info, .saler-sidebar-lists {
+  // width: 204px;
+  background-color: #fff;
+  border: solid 1px #dcdcdc;
+  padding: 25px 38px;
+  padding-right: 20px;
+}
+// 点击添加字体颜色
+.is-click {
+  color: #D90202;
+}
+// 卖家信息
+.saler-info {
+  // avatar
+  .saler-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 100px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // nickname
+  .saler-nickname {
+    color: #2b19d1;
+  }
+  // operate
+  .saler-center-operate {
+    flex-direction: column;
+    line-height: 30px;
+    margin-top: 15px;
+  }
+}
+// 侧边栏样式
+.saler-sidebar-lists {
+  .saler-sidebar-list {
+    line-height: 26px;
+    .saler-sidebar-text {
+      position: relative;
+      padding-left: 20px;
+      .circle-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #666;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -4px;
+      }
+    }
+    .active {
+      color: @saler-sidebar-active;
+    }
+  }
+}
+// 右边内容样式
+.saler-cont-right {
+  width: 996px;
+  margin-left: 20px;
+  // padding-left: 224px;
+}
+// 卖家中心首页
+// 输入框
+.index-input-item {
+  width: 220px;
+  height: 28px;
+  line-height: 26px;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #7d7d7d;
+  position: relative;
+  .index-input {
+    width: 100%;
+    color: #666;
+    border: 0;
+    padding-left: 5px;
+    font-size: 14px;
+    background-color: #ffffff;
+  }
+  // 下拉按钮
+  .drop-down-btn {
+    width: 18px;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #dcdcdc;
+    color: #666;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.45;
+  }
+  .drop-down-lists {
+    width: 120px;
+    color: #666;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    z-index: 100;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 2px #ccc;
+    .drop-item {
+      height: 35px;
+      line-height: 35px;
+      background-color: #fff;
+      font-size: 12px;
+      padding-left: 15px;
+    }
+    .drop-item:hover {
+      background-color: #5897FB;
+      color: #fff;
+    }
+  }
+}
+// 搜索订单按钮
+.search-order-btn {
+  width: 118px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #2b19d1;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  color: #fffefe;
+}
+
+// 第二部分样式
+// 状态框
+.status-box {
+  height: 77px;
+  line-height: 77px;
+  background-color: #ffffff;
+  border: 1px solid #d2d2d2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  .status-item {
+    padding: 0 15px;
+    width: 25%;
+    color: #666;
+    border-right: 1px solid #d2d2d2;
+  }
+  .status-num {
+    color: #fb930c;
+  }
+  .status-item:last-child {
+    border-right: 0;
+  }
+  .on {
+    color: #d90202;
+  }
+}
+// 第三部分样式
+// 订单操作描述显示框
+.order-describ-box {
+  height: 38px;
+  background-color: #ffffff;
+  padding: 10px 0;
+  .describ-name {
+    width: 304px;
+  }
+  .describ-item {
+    position: relative;
+    width: 111px;
+    .describ-item-split {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+// 全部订单
+// 无数据是显示
+.show-icon {
+  min-height: 400px;
+  position: relative;
+  .show-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .icon-box {
+    width: 220px;
+    height: 220px;
+    img {
+      max-width: 100%;
+    }
+  }
+  // 提示
+  .warning-notice {
+    color: #a2b5be;
+  }
+}
+
+// 第四部分
+// 待付款样式
+.order-head {
+  height: 40px;
+  line-height: 40px;
+  background-color: #2b19d1;
+  margin-top: 25px;
+  padding-left: 15px;
+}
+.order-body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid #dcdcdc;
+  .order-body-img {
+    width: 177px;
+    height: 190px;
+    background-color: #fff;
+    border: 1px solid #d2d2d2;
+    padding: 15px 20px;
+    margin: 20px 20px 20px 10px;
+  }
+  .order-body-text {
+    width: 130px;
+    text-align: center;
+    padding: 0 15px;
+    position: relative;
+    .order-body-split {
+      width: 1px;
+      background-color: #dcdcdc;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .order-body-text.time {
+    word-break: break-word;
+  }
+  .order-body-text:last-child {
+    border-right: 0;
+  }
+}
+// 操作按钮
+.order-operate-btn {
+  width: 84px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+	background-color: #ff3c00;
+  border-radius: 4px;
+  color: #fff;
+}
+
+// 出售中的宝贝
+.operate-btns {
+  height: 60px;
+}
+// 商品操作按钮
+.operate-goods-btn {
+  width: 144px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+	background-color: #2b19d1;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  color: #fffefe;
+}
+.salering-box {
+  .status-box {
+    justify-content: flex-start;
+  }
+}
+.check-all-box {
+  position: relative;
+  .check-all-order {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.salering-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input[type='checkbox'] {
+  color: red;
+  background-color: #fff;
+}
+// 上下架操作
+.salering-operate-text {
+  color: #2b19d1;
+}
+.salering-goods-box {
+  .order-body-text {
+    padding: 0 10px;
+  }
+}
+
+// 发布商品
+.release-box {
+  .release-title,.release-promotion,
+  .release-price，.release-classify,
+  .release-specification, .release-goods-img,
+  .release-describ {
+    justify-content: flex-start;
+  }
+  .label-text-title {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  // 标题
+  .release-title {
+    .release-title-input {
+      width: 470px;
+      height: 28px;
+      background-color: #ffffff;
+      border: solid 1px #7d7d7d;
+      input {
+        width: 100%;
+        height: 26px;
+        border: 0;
+      }
+    }
+  }
+  // 促销信息
+  .release-promotion {
+    .release-promotion-info {
+      width: 470px;
+      height: 92px;
+      background-color: #ffffff;
+      border: solid 1px #7d7d7d;
+      .info-area {
+        width: 100%;
+        height: 100%;
+        resize: none;
+        border: 0;
+        color: #666;
+      }
+      .info-area:focus {
+        outline: none;
+      }
+    }
+  }
+  // 促销价格
+  .release-price {
+    .release-goods-price {
+      position: relative;
+      .release-price-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  // 宝贝描述
+  .release-describ {
+    .release-goods-describ {
+      width: 614px;
+      height: 523px;
+      background-color: #ffffff;
+      border: 1px solid #7d7d7d;
+      .release-describ-title {
+        height: 28px;
+        line-height: 28px;
+        border-bottom: 1px solid #7d7d7d;
+        .title-detail {
+          color: #2b19d1;
+        }
+      }
+      // 描述框
+      .goods-describ-box {
+        width: 100%;
+        height: 492px;
+        border: 0;
+        resize: none;
+      }
+      .goods-describ-box:focus {
+        outline-color: transparent;
+      }
+    }
+  }
+  
+  // 立即发布按钮
+  .release-btn {
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #d51919;
+    margin-left: 120px;
+  }
+}
+
+// 个人资料
+.saler-center-info {
+  min-height: 600px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  padding: 40px;
+  // 头像框
+  .saler-avatar-box {
+    max-width: 400px;
+    .saler-info-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      line-height: 150px;
+      text-align: center;
+      overflow: hidden;
+      vertical-align: middle;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .change-title {
+      color: #d90202;
+    }
+    // uploader上传样式
+    .avatar-uploader .el-upload {
+      border: 1px dashed #d9d9d9;
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .avatar-uploader .el-upload:hover {
+      border-color: #409EFF;
+    }
+    .avatar-uploader-icon {
+      font-size: 28px;
+      color: #8c939d;
+      width: 178px;
+      height: 178px;
+      line-height: 178px;
+      text-align: center;
+    }
+    .avatar {
+      width: 178px;
+      height: 178px;
+      display: block;
+    }
+  }
+  // 表单
+  .form-box {
+    max-width: 600px;
+    .change-btn {
+      width: 120px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      border-radius: 6px;
+      letter-spacing: 2px;
+      color: #fff;
+      background-color: #0d19b0;
+    }
+  }
+}

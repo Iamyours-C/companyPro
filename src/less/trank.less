@@ -1,0 +1,148 @@
+// 排行榜样式
+// 顶部导航样式开始
+@rank-main-color: #ff0000;
+.nav-rank {
+  height: 80px;
+  background-color: #d90202;
+  margin-top: 40px;
+  color: #fefefe;
+  .nav-rank-lists {
+    .nav-rank-list {
+      height: 80px;
+      padding: 15px 25px;
+      background-color: transparent;
+      position: relative;
+      &.checked {
+        background-color: #bc0303;
+      }
+      &.checked .checked-shape,
+      &.checked .checked-trangle {
+        display: block;
+      }
+    }
+    .nav-rank-list:last-child img {
+      padding-bottom: 2px;
+    }
+    // 激活形状
+    .checked-shape {
+      width: 114px;
+      height: 7px;
+      background-color: #bc0303;
+      position: absolute;
+      top: -7px;
+      left: 0;
+      display: none;
+    }
+    .checked-trangle {
+      border: 8px solid transparent;
+      border-bottom-color: #bc0303;
+      position: absolute;
+      right: -8px;
+      top: -15px;
+      display: none;
+    }
+  }
+  .all-classify-btn {
+    height: 80px;
+    line-height: 80px;
+  }
+}
+// 顶部导航样式结束
+
+// 分类导航样式开始
+.nav-classify {
+  height: 64px;
+  border-bottom: 2px solid #2b19d1;
+  .nav-classify-title {
+    height: 64px;
+    line-height: 64px;
+    background-color: #2b19d1;
+    color: #f4ea2a;
+    padding: 0 56px 0 100px;
+    position: relative;
+    .ranking-logo {
+      position: absolute;
+      left: 50px;
+      top: 8px;
+    }
+  }
+  .nav-classify-lists {
+    width: 683px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .nav-classify-item {
+      width: 120px;
+      text-align: left;
+      padding: 5px 25px;
+      color: #666;
+      &.on {
+        color: #2b19d1;
+      }
+    }
+
+  }
+}
+// 分类导航样式结束
+
+// 排行商品列表列表样式开始
+.rank-goods-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ebe9e9;
+  margin-top: 25px;
+  padding: 24px 0;
+  .rank-goods-list {
+    width: 16%;
+    margin: 0 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    // 商品图
+    .rank-goods-img {
+      display: inline-block;
+      width: 192px;
+      height: 192px;
+      border: 2px solid @rank-main-color;
+      text-align: center;
+      padding: 10px 28px;
+      background-color: #fff;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      // 买三送一标志
+      .position-img {
+        height: 50px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      .position-text {
+        position: absolute;
+        left: 8px;
+        bottom: 10px;
+      }
+    }
+    // 商品描述
+    .rank-goods-describ {
+      padding: 15px 12px;
+      text-align: left;
+      background: #f7f6fd;
+      .rank-goods-price {
+        color: @rank-main-color;
+      }
+    }
+    // 火苗
+    .hot-fire {
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+    }
+  }
+}
+// 排行商品列表列表样式结束
